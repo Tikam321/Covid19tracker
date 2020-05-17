@@ -1,0 +1,64 @@
+{% extends 'opd/base.html' %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+{% load static %}
+
+
+    {% block content %}
+
+  
+
+    <div class="container">
+      <div class="jumbotron">
+        <h3> Enter the Country to know about the COVID-19 Status</h3>
+
+
+        <form action="{% url 'country_search' %}" method="post">
+             {% csrf_token %}
+             <label for="exampleForm2">Enter Country</label>
+
+             <input  id="exampleForm2" style = "margin-bottom: 3rem;"  class="form-control" name="search" type="text" placeholder="Search here for country">
+             <button style = "margin-bottom: 3rem;" class="btn btn-primary" type="submit" >Submit
+             </button>
+         </form>
+         {% if Confirmed %}
+        <div class="row">
+          <div class="card text-white bg-primary  mb-3" style="max-width: 15rem; margin-right: 3rem; margin-left: 3rem;">
+          <div class="card-header"><h2>Confirmed </h2></div>
+          <div class="card-body">
+            <h5 class="card-title"><h1> <center>{{ Confirmed }}</center></h1></h5>
+
+          </div>
+          </div>
+
+
+        <div class="card text-white bg-primary mb-3" style="max-width: 15rem; margin-right: 3rem;">
+        <div class="card-header"><h2>Deaths cases</h2></div>
+        <div class="card-body">
+          <h5 class="card-title"><h1><center>{{ Deaths }}</center></h1></h5>
+
+        </div>
+        </div>
+      <div class="card text-white bg-secondary mb-3" style="max-width: 15rem; margin-right: 3rem;">
+    <div class="card-header"><h2>Recovered </h2></div>
+    <div class="card-body">
+    <h5 class="card-title"><h1> <center>
+        {{ Recovered }}</center></h1></h5>
+
+    </div>
+    </div>
+    <div class="card text-white bg-primary mb-3" style="max-width: 15rem; margin-right: 3rem;">
+    <div class="card-header"><h2>Active cases</h2></div>
+    <div class="card-body">
+    <h5 class="card-title"><h1><center>{{ Active }}</center></h1></h5>
+
+    </div>
+    </div>
+    {% endif %}
+</div>
+
+      </div>
+
+
+    </div>
+    {% endblock %}

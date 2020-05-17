@@ -1,0 +1,46 @@
+ {% extends 'opd/base.html' %}
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block content %}
+    <div class="jumbotron">
+      <h3>Statewise COVID-19 status </h3>
+
+    </div>
+    <div class="container">
+    <table id="customers">
+      <tr>
+        <th><h3>Sr.No</h3></th>
+        <th><h3>Name of State / UT</h3></th>
+        <th><h3>Total Confirmed cases (Including 111 foreign Nationals)</h3></th>
+        <th><h3>Cured/Discharged/Migrated</h3></th>
+        <th>Deaths ( more than 70% cases due to comorbidities </th>
+      </tr>
+       {% for i in mi %}
+      <tr>
+        {% for m in i %}
+        <td><h4>{{ m }}</h4></td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="2"><h4>Total number of confirmed cases in India</h4></td>
+        <td><h4>{{ active_cases }}</h4></td>
+        <td><h4>{{ recover }}</h4></td>
+        <td><h4> {{ death }}</h4></td>
+      </tr>
+
+
+    </table>
+  </div>
+
+    {% endblock %}
+
+  </body>
+</html>

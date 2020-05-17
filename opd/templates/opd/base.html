@@ -1,0 +1,111 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- Material Design Bootstrap -->
+        <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+        <!-- Your custom styles (optional) -->
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+
+    <!-- Font Awesome -->
+
+    <!-- Bootstrap core CSS -->
+
+    <!-- Google Fonts Roboto -->
+
+
+    <title>COVID-19</title>
+
+
+
+
+
+
+
+  </head>
+  <body>
+    <!--Navbar-->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark primary-color" style = "top-right: 0rem;">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="{% url 'country_search' %}">Home</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="{%  url 'precaution' %}">precautions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'transmission' %}">transmission</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">India Covid-19 Status</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+
+          <a class="dropdown-item" href="{% url 'corona'%}">World wide </a>
+          <a class="dropdown-item" href="{% url 'corona'%}">India states </a>
+          <a class="dropdown-item" href="{% url 'statewise' %}"> states wise </a>
+
+
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">
+  {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+
+
+    {% block content %}
+
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript"></script>
+
+  </body>
+</html>

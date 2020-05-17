@@ -1,0 +1,83 @@
+{% extends 'opd/base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  </head>
+  <body>
+    {% block content %}
+    <div class="container">
+      <div class="jumbotron indigo">
+        <h1>Modes of transmission of virus causing COVID-19: implications for IPC precaution recommendations</h1>
+
+        </div>
+        <h2>Modes of transmission of the COVID-19 virus
+        </h2>
+        <!-- Grid column -->
+
+   <!--Panel-->
+   <div class="row">
+     <div class="col-lg-8 col-md-12">
+   <div class="card card-body" style="margin-bottom:3rem;">
+     <h4 class="card-title">Respiratory infections can be transmitted through droplets of different sizes: when the droplet particles are >5-10 μm in diameter they are referred to as respiratory droplets, and when then are 5μm in diameter, they are referred to as droplet nuclei.1 According to current evidence, COVID-19 virus is primarily transmitted between people through respiratory droplets and contact routes.2-7 In an analysis of 75,465 COVID-19 cases in China, airborne transmission was not reported.</h4>
+   </div>
+ </div>
+
+ <div class="col-lg-3 col-md-12">
+
+   <div class="card card-body">
+     <div class="card-header">
+       Modes of transmission of virus causing COVID-19
+     </div>
+     <a href="https://www.who.int/publications-detail/modes-of-transmission-of-virus-causing-covid-19-implications-for-ipc-precaution-recommendations"><button class="btn btn-primary" type="button" name="button">Access the Publication</button></a>
+   </div>
+
+
+
+
+   </div>   <!--/.Panel-->
+
+ <!-- Grid column -->
+ <div class="card card-body" style="margin-bottom:3rem;">
+   <h4 class="card-title">Droplet transmission occurs when a person is in in close contact (within 1 m) with someone who has respiratory symptoms (e.g., coughing or sneezing) and is therefore at risk of having his/her mucosae (mouth and nose) or conjunctiva (eyes) exposed to potentially infective respiratory droplets. Transmission may also occur through fomites in the immediate environment around the infected person.8 Therefore, transmission of the COVID-19 virus can occur by direct contact with infected people and indirect contact with surfaces in the immediate environment or with objects used on the infected person (e.g., stethoscope or thermometer)</h4>
+   </div>
+
+   <div class="card card-body" style="margin-bottom:3rem;">
+     <h4 class="card-title">Airborne transmission is different from droplet transmission as it refers to the presence of microbes within droplet nuclei, which are generally considered to be particles 5μm in diameter, can remain in the air for long periods of time and be transmitted to others over distances greater than 1 m.</h4>
+   </div>
+
+
+ <div class="card card-body" style="margin-bottom:3rem;">
+   <h4 class="card-title">In the context of COVID-19, airborne transmission may be possible in specific circumstances and settings in which procedures or support treatments that generate aerosols are performed; i.e., endotracheal intubation, bronchoscopy, open suctioning, administration of nebulized treatment, manual ventilation before intubation, turning the patient to the prone position, disconnecting the patient from the ventilator, non-invasive positive-pressure ventilation, tracheostomy, and cardiopulmonary resuscitation.</h4>
+ </div>
+ <div class="card card-body" style="margin-bottom:3rem;">
+   <h4 class="card-title">There is some evidence that COVID-19 infection may lead to intestinal infection and be present in faeces. However, to date only one study has cultured the COVID-19 virus from a single stool specimen.9  There have been no reports of faecal−oral transmission of the COVID-19 virus to date.</h4>
+ </div>
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+
+  </body>
+</html>
