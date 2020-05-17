@@ -76,7 +76,6 @@ def country_search(request):
     response = requests.get(country_url)
     if response.status_code == 404:
         messages.warning(request, 'Pease enter the valid country')
-        print("fuck you")
         context={
         }
 
