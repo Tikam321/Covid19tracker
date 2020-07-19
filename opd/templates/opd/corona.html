@@ -1,16 +1,10 @@
 {% extends 'opd/base.html' %}
-{% load static %}
-{% load staticfiles %}
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
 
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
   </head>
   <body>
@@ -39,7 +33,7 @@
         </div>
         <div class="col-sm">
           <hr>
-          <div class="card text-white bg-primary mb-3" style="width: 25rem;" >
+          <div class="card text-white bg-primary mb-3"  >
           <div class="" style="text-align:center">
             <div class="card-header "><h2 id="corona">Deaths</h2></div>
              <h1 >{{ deaths }}</h1>
@@ -65,25 +59,30 @@
       </div>
     </div>
     <div class="container">
-      <div class="jumbotron">
+      <div class="jumbotron jumbotron-fluid">
 <div class="card">
 
 
-        <h1> <center>  INDIA CORONA STATUS </center></h1>
+        <h3> <center>  INDIA CORONA STATUS </center></h3>
         </div>
+        <hr>
         <div class="row rk">
           <div class="col-sm">
+            <hr>
 
           <div class="card text-white bg-primary mb-3 mack" style="max-width: 17em;">
   <div class="card-header">Corona virus cases</div>
   <div class="card-body">
     <h5 class="">{{ active_cases }}</h5>
 
+
   </div>
 </div>
 </div>
+          <hr>
 
 <div class="col-sm">
+  <hr>
 
 
 <div class="card text-white bg-primary mb-3 mack" style="max-width: 17rem;">
@@ -91,21 +90,27 @@
   <div class="card-body">
     <h5 class="card-title">{{ mt1 }}</h5>
 
+
   </div>
 </div>
 </div>
+          <hr>
 <div class="col-sm">
+  <hr>
 <div class="card text-white bg-primary mb-3 mack" style="max-width: 17em;">
   <div class="card-header">Deaths</div>
   <div class="card-body">
     <h5 class="card-title">{{ death }}</h5>
 
+
   </div>
 </div>
 </div>
+          <hr>
 
 
 <div class="col-sm">
+  <hr>
 <div class="card text-white bg-success mb-3 mack" style="max-width: 17rem;">
   <div class="card-header">Recovered</div>
   <div class="card-body">
@@ -114,11 +119,11 @@
   </div>
 </div>
 </div>
-
-
-
+          <hr>
 
 </div>
+
+        <hr>
 <div class="">
   <h3>COVID-19 Statewise Status </h3>
   <a href="{% url 'statewise' %}"><button type="button"class="btn btn-success" name="button">Click Here</button></a>

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'opd',
+    'users.apps.UsersConfig',
     'crispy_forms',
 ]
 
@@ -117,12 +118,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+MEDIA_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'media'))
+MEDIA_URL = "/media/"
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
+LOGIN_REDIRECT_URL ='/'
+LOGIN_URL = 'login'
 
 
 django_heroku.settings(locals())
